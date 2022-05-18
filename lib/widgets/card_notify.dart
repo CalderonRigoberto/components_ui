@@ -9,26 +9,19 @@ class CardNotify extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Stack(
         children:  [
-          Container(
-            width: double.infinity,
-            height: 250,
-            decoration: BoxDecoration(
-              color: Colors.red,
-              borderRadius: BorderRadius.circular(24),
-              boxShadow: const [
-                BoxShadow(
-                  color: Colors.red,
-                  blurRadius: 12,
-                  offset: Offset(0,3)
-                )
-              ],
-            ),
+          ClipRRect(
             child: Container(
+              width: double.infinity,
               height: 250,
-              width: 100,
-              color: Colors.green,
+              decoration: BoxDecoration(
+                color: Colors.red,
+                borderRadius: BorderRadius.circular(24),
+                border: const Border(
+                  left: BorderSide( color: Colors.green, width: 20),
+                  top: BorderSide( color: Colors.green, width: 20),
+                )
+              )
             ),
-            
           ),
           Positioned.fill(
             child: Row(
